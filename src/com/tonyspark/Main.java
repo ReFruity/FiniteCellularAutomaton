@@ -28,10 +28,13 @@ public class Main
             board.associateConfigurations(new int[]{0,0,1,1}, new int[]{1,0,0,0});
             board.associateConfigurations(new int[]{1,0,0,0}, new int[]{1,1,1,1});
 
-            for(int i = 0; i < 10; i++) {
+            String input;
+
+            do {
+                input = in.readLine();
                 out.println(board.toString());
                 board.step();
-            }
+            } while(!input.equals("q"));
         }
         catch (IOException e)
         {
