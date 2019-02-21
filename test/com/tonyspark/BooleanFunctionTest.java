@@ -22,9 +22,9 @@ class BooleanFunctionTest
         function.setFalse(1, 0);
         function.setFalse(1, 1);
 
-        assertEquals(false, function.call(0, 0));
-        assertEquals(true, function.call(0, 1));
-        assertEquals(false, function.call(1, 0));
-        assertEquals(false, function.call(1, 1));
+        assertFalse(function.call(0, 0));
+        assertTrue(function.call(0, 1));
+        assertFalse(function.call(1, 0));
+        assertFalse(function.call(1, 1));
     }
 }
